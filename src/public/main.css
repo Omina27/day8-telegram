@@ -1,33 +1,64 @@
 body {
+  
+    margin: 0;
     font-family: helvetica, sans-serif;
     background-image: url(./image/sky.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .window {
-    max-width: 700px;
+    height: 100%;
+    max-width: 1000px;
+    min-height: 700px;
     margin: 0 auto;
     padding: 10px;
     box-sizing: border-box;
     position: relative;
 }
 
-.header{
-    max-width: 800px;
-    background: #ededed;
-    padding: 10px;
-    margin: -10px -10px 8px -10px;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
-    font-family: serif;
-    font-weight: 700;
-    font-size: 30px;
-}
+
 
 .chats {
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 990px;
     margin-top: 20px;
+    margin-bottom: 70px;
 }
+
+.wrapper{
+    position: relative;
+}
+
+.content{
+    margin: 0 auto;
+    color: #fff;
+    align-items: center;
+    text-align: center;
+}
+
+.heading{
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.text{
+    font-size: 25px
+}
+
+.inputWrapper{
+    position: fixed;
+    z-index: 1000;
+    bottom: 0;
+    left: 31%;
+    margin-bottom: 10px;
+    margin-top:10px;
+
+
+}
+
+
 
 .chat{
     max-width: 350px;
@@ -49,12 +80,13 @@ body {
 .chat1{
     display: block;
     word-break: break-all;
-    
+    margin-bottom: 10px;
 }
 
 .chat2 {
     word-break: break-all;
     color: black;
+    margin-bottom: 10px;
 }
 
 
@@ -100,30 +132,30 @@ body {
 
 .new-chat{
     display: block;
-    max-width: 800px;
     display: flex;
-    background: #ededed;
+    justify-content: center;
     align-items: center;
     margin-bottom: 20px;
     margin: 0 auto;
 }
-.new-chat input{
-    width: 700px;
+
+input{
+    width: 600px;
     padding: 10px;
     font-size: 18px;
-    width: 250px;
     height: 40px;
     border: none;
     display: block;
-    color: #999;
+    color: #000;
     font-weight: 100;
-    background: #ddd;
+    border-radius: 10px 0 0 10px;
+    background: #ededed;
 }
 .new-chat button{
     display: block;
     height: 59px;
     padding: 10px;
-    background-color: #4547458c;
+    background-color: #161D31;
     outline: none;
     cursor: pointer;
     margin-left: auto;
@@ -131,6 +163,8 @@ body {
     font-weight: 400;
     font-size: 18px;
     color: #fff;
+    border: none;
+    border-radius: 0px 10px 10px 0;
     
 }
 .new-chat button:active{
@@ -149,6 +183,6 @@ h4 {
     border: 1px solid rgba(68, 68, 68, 0.226);
     border-radius: 10px;
     margin: 10px auto;
-    
-    
+   
 }
+

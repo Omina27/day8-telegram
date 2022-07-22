@@ -16,15 +16,19 @@ socket.on('joined-user', data => {
 form.addEventListener('submit', e => {
     e.preventDefault()
 
-    const div = document.createElement('div')
-    div.innerHTML += `You: ${input.value}`
-    div.classList.add('chat', "chat2")
-    chats.appendChild(div)
-
+    
     socket.emit('new-message', {
         name,
         message: input.value
     })
+
+    
+    if (!input.value.trim() == "") {
+        const div = document.createElement('div')
+        div.innerHTML += `You: ${input.value}`
+        div.classList.add('chat', "chat2")
+        chats.appendChild(div)
+    }
 
     input.value = ''
 
